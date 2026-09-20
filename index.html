@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Andes Travel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  
+</head>
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" style="background-color: #E3DBBB !important;">
+    <div class="container-fluid">
+        <!-- Logo de la Marca -->
+        <a class="navbar-brand fw-bold" href="index.html" style="color: #41431B;">ANDES TRAVEL</a>
+        
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Enlaces de Navegación alineados a la izquierda -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold" style="color: #41431B !important;" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="paquetes.html">Paquetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="sobre-nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+
+            <!-- Sección Derecha: Botón de Sesión y Buscador -->
+            <div class="d-flex align-items-center gap-3">
+                
+                <!-- Botón que activa el Modal (Actualizado a Bootstrap 5: data-bs-toggle) -->
+                <button type="button" class="btn btn-sm fw-bold px-3 py-2 text-dark shadow-sm" style="background-color: #AEB784; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Iniciar Sesión
+                </button>
+
+                <!-- Barra de Búsqueda -->
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-sm fw-bold text-white px-3" type="submit" style="background-color: #41431B; border-color: #41431B;">Buscar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- VENTANA MODAL DE INICIAR SESIÓN -->
+<!-- ========================================== -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg border-0 rounded-4" style="background-color: #F9F6EE;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #41431B;">Iniciar Sesión / Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label small fw-bold" style="color: #41431B;">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documento" class="form-label small fw-bold" style="color: #41431B;">Documento de Identificación</label>
+                        <input type="text" class="form-control" id="documento" placeholder="Escribe tu documento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label small fw-bold" style="color: #41431B;">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="Escribe tu correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label small fw-bold" style="color: #41431B;">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Elige un usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label small fw-bold" style="color: #41431B;">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">Nunca compartiremos tu contraseña.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="repassword" class="form-label small fw-bold" style="color: #41431B;">Repite la Contraseña</label>
+                        <input type="password" class="form-control" id="repassword" placeholder="Repite tu contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="sesionCheck">
+                        <label class="form-check-label small text-muted" for="sesionCheck">Mantener sesión iniciada</label>
+                    </div>
+                    <button type="submit" class="btn w-100 fw-bold text-white py-2" style="background-color: #41431B;">Crear Cuenta / Iniciar Sesión</button>
+                </form>
+            </div>
+            
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+    <main>
+        <div class="container my-5">
+            
+            <div class="row">
+                
+                
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div id="miCarrusel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+                        
+                       
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+
+                       
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <img src="img/9ea993d5-24cb-4fcb-86e9-ced4d9090113.webp" class="d-block w-100" alt="Miami">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5 class="fw-bold">Miami</h5>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="img/screenshot-2026-07-22-131208.png" class="d-block w-100" alt="Brasil">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5 class="fw-bold">Brasil</h5>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="img/Torre del Reloj en Cartagena de Indias, Colombia.webp" class="d-block w-100" alt="Cartagena">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5 class="fw-bold">Cartagena</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                     
+                        <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+
+              
+                <div class="col-lg-4">
+                    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta" style="background-color: #f8f9fa;">
+                        <div>
+                            <h4 class="fw-bold mb-3" style="color: #41431B;">¡Oferta Especial!</h4>
+                            <p class="text-muted">Descubre nuestros paquetes exclusivos con todo incluido para esta temporada. ¡No te quedes sin viajar!</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">✔️ Vuelos directos incluidos</li>
+                                <li class="mb-2">✔️ Hoteles 5 estrellas</li>
+                                <li class="mb-2">✔️ Tours guiados</li>
+                            </ul>
+                        </div>
+                        <a href="paquetes.html" class="btn w-100 button-paquetes" style="background-color: #E3DBBB; color: #41431B; font-weight: 600; border-color: #41431B;">Ver Paquetes</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- DESTINOS DESTACADOS -->
+           <div class="destinos-populares">
+            <section class="container my-5 py-4">
+               <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #41431B;">Destinos Destacados</h2>
+        </div>
+
+                <div class="row">
+                   
+                    <div class="col-lg-4 mb-2 mb-lg-0">
+                        <div class="card card-style hover-tarjeta h-100 d-flex flex-column justify-content-between" style="width: 18rem;">
+                            <img class="card-img-top img-card" src="img/paris non ed 4.avif" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">París</h5>
+                                <p class="card-text">París lo tiene todo: la magia de la Torre Eiffel, arte en cada esquina y el encanto único de sus cafés parisinos para una escapada inolvidable.</p>
+                                <a href="destinos.html" class="btn btn-primary tarjeta-destino" style="background-color: #AEB784; border: #41431B;">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="col-lg-4 mb-2 mb-lg-0">
+                        <div class="card card-style hover-tarjeta h-100 d-flex flex-column justify-content-between" style="width: 18rem;">
+                            <img class="card-img-top img-card" src="img/Orlando_skyline-night-view_ss_non-editorial_yoitnj.avif" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Orlando</h5>
+                                <p class="card-text">Sumérgete en Orlando, la capital mundial de la diversión, donde los parques temáticos de clase mundial y la aventura se unen para crear recuerdos inolvidables.</p>
+                                <a href="destinos.html" class="btn btn-primary tarjeta-destino" style="background-color: #AEB784; border: #41431B;">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                    <div class="col-lg-4 mb-2 mb-lg-0">
+                        <div class="card card-style hover-tarjeta h-100 d-flex flex-column justify-content-between" style="width: 18rem;">
+                            <img class="card-img-top img-card" src="img/Vista_aérea_de_la_Plaza_del_Congreso_10.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Buenos Aires</h5>
+                                <p class="card-text">Descubre Buenos Aires, una vibrante fusión de elegancia europea y pasión sudamericana, donde el tango, la arquitectura histórica y una oferta gastronómica imperdible te esperan a cada paso.</p>
+                                <a href="destinos.html" class="btn btn-primary tarjeta-destino" style="background-color: #AEB784; border: #41431B;">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+            
+        <!-- BENEFICIOS -->
+            
+    <section class="container my-5 py-4">
+       
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #41431B;">¿Por qué elegir Andes Travel?</h2>
+            <p class="text-muted">Nos encargamos de cada detalle para que tu único trabajo sea disfrutar.</p>
+        </div>
+
+        
+        <div class="row g-4 text-center">
+            
+         
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB;">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#41431B" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Atención personalizada 24/7</h4>
+                    <p class="text-muted mb-0">Estamos disponibles en todo momento para acompañarte y resolver cualquier imprevisto antes y durante tu viaje.</p>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB;">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#41431B" viewBox="0 0 16 16">
+                            <path d="M1.5 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.086 1H1.5zM2 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                        </svg>
+                    </div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Garantía de mejor precio</h4>
+                    <p class="text-muted mb-0">Ofrecemos tarifas competitivas y paquetes exclusivos ajustados a tu presupuesto sin sacrificar la calidad.</p>
+                </div>
+            </div>
+
+         
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB;">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#41431B" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
+                    </div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Guías turísticos certificados</h4>
+                    <p class="text-muted mb-0">Explora cada destino de la mano de expertos locales profesionales que garantizan experiencias seguras y memorables.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OPINIOONES -->
+
+    <section class="container my-5 py-4">
+      
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #41431B;">Lo que dicen nuestros viajeros</h2>
+            <p class="text-muted">Experiencias reales de quienes ya confiaron en Andes Travel.</p>
+        </div>
+        <div class="row g-4">
+            
+            
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white d-flex flex-column justify-content-between hover-tarjeta">
+                    <div>
+                        
+                        <div class="mb-3 text-warning">
+                            ★★★★★
+                        </div>
+                       
+                        <p class="text-muted fst-italic mb-4">"Viajar a París con Andes Travel fue una experiencia mágica. Cada detalle del hotel y los tours estuvo perfectamente organizado. ¡Sin duda los volveré a elegir!"</p>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-3" style="width: 50px; height: 50px; background-color: #41431B;">
+                            IR
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-0" style="color: #41431B;">Isabella Restrepo</h6>
+                            <small class="text-muted">Viajó a París</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white d-flex flex-column justify-content-between hover-tarjeta">
+                    <div>
+                        
+                        <div class="mb-3 text-warning">
+                            ★★★★★
+                        </div>
+                       
+                        <p class="text-muted fst-italic mb-4">"La atención personalizada 24/7 nos salvó cuando tuvimos una duda con el vuelo a Orlando. Son súper profesionales y los guías turísticos son excelentes."</p>
+                    </div>
+                   
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-3" style="width: 50px; height: 50px; background-color: #41431B;">
+                            NL
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-0" style="color: #41431B;">Ninfa López</h6>
+                            <small class="text-muted">Viajó a Orlando</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white d-flex flex-column justify-content-between hover-tarjeta">
+                    <div>
+                        
+                        <div class="mb-3 text-warning">
+                            ★★★★★
+                        </div>
+                        
+                        <p class="text-muted fst-italic mb-4">"Encontré el paquete perfecto para mi familia al mejor precio del mercado. Todo salió tal como lo prometieron en la agencia. ¡Gracias Andes Travel!"</p>
+                    </div>
+                   
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-3" style="width: 50px; height: 50px; background-color: #41431B;">
+                            BD
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-0" style="color: #41431B;">Brisa Dominguez</h6>
+                            <small class="text-muted">Viajó a Madrid</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUSCRIPCION -->
+    <section class="container my-5">
+        <div class="p-5 rounded-4 shadow-sm text-center" style="background-color: #E3DBBB;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    
+                    
+                    <h3 class="fw-bold mb-3" style="color: #41431B;">¡No te pierdas ninguna aventura!</h3>
+                    <p class="text-dark mb-4 opacity-75">Suscríbete a nuestro boletín y recibe ofertas exclusivas, guías de viaje y descuentos directos en tu correo electrónico.</p>
+                    
+                    
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg border-0 shadow-sm" placeholder="Ingresa tu correo electrónico..." required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn w-100 btn-lg fw-bold text-white" style="background-color: #41431B;">Suscribirme</button>
+                        </div>
+                    </form>
+
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+ 
+   
+    <footer class="text-white pt-5 pb-4" style="background-color: #41431B;">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                
+                
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Andes Travel</h5>
+                    <p class="text-white-50">
+                        Tu agencia de confianza para descubrir los destinos más fascinantes del mundo. Vivamos juntos la magia de viajar con la mejor asesoría y comodidad.
+                    </p>
+                </div>
+
+               
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Explora</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none opacity-75 hover-opacity">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html" class="text-white text-decoration-none opacity-75 hover-opacity">Destinos</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none opacity-75 hover-opacity">Servicios</a></li>
+                        <li class="mb-2"><a href="paquetes.html" class="text-white text-decoration-none opacity-75 hover-opacity">Paquetes</a></li>
+                        <li class="mb-2"><a href="sobre-nosotros.html" class="text-white text-decoration-none opacity-75 hover-opacity">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none opacity-75 hover-opacity">Contactanos</a></li>
+                    </ul>
+                </div>
+
+               
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Contacto</h6>
+                    <p class="text-white-50 mb-2">📍 Medellín, Antioquia, Colombia</p>
+                    <p class="text-white-50 mb-2">📧 contacto@andestravel.com</p>
+                    <p class="text-white-50 mb-2">📞 +57 321 032 3192</p>
+                </div>
+
+            </div>
+
+            
+            <hr class="my-4" style="background-color: #E3DBBB; opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Andes Travel</strong>. Todos los derechos reservados.</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Andes Travel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  
+</head>
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" style="background-color: #E3DBBB !important;">
+    <div class="container-fluid">
+        <!-- Logo de la Marca -->
+        <a class="navbar-brand fw-bold" href="index.html" style="color: #41431B;">ANDES TRAVEL</a>
+        
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Enlaces de Navegación alineados a la izquierda -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold" style="color: #41431B !important;" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="paquetes.html">Paquetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="sobre-nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+
+            <!-- Sección Derecha: Botón de Sesión y Buscador -->
+            <div class="d-flex align-items-center gap-3">
+                
+                <!-- Botón que activa el Modal (Actualizado a Bootstrap 5: data-bs-toggle) -->
+                <button type="button" class="btn btn-sm fw-bold px-3 py-2 text-dark shadow-sm" style="background-color: #AEB784; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Iniciar Sesión
+                </button>
+
+                <!-- Barra de Búsqueda -->
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-sm fw-bold text-white px-3" type="submit" style="background-color: #41431B; border-color: #41431B;">Buscar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- VENTANA MODAL DE INICIAR SESIÓN -->
+<!-- ========================================== -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg border-0 rounded-4" style="background-color: #F9F6EE;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #41431B;">Iniciar Sesión / Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label small fw-bold" style="color: #41431B;">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documento" class="form-label small fw-bold" style="color: #41431B;">Documento de Identificación</label>
+                        <input type="text" class="form-control" id="documento" placeholder="Escribe tu documento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label small fw-bold" style="color: #41431B;">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="Escribe tu correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label small fw-bold" style="color: #41431B;">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Elige un usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label small fw-bold" style="color: #41431B;">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">Nunca compartiremos tu contraseña.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="repassword" class="form-label small fw-bold" style="color: #41431B;">Repite la Contraseña</label>
+                        <input type="password" class="form-control" id="repassword" placeholder="Repite tu contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="sesionCheck">
+                        <label class="form-check-label small text-muted" for="sesionCheck">Mantener sesión iniciada</label>
+                    </div>
+                    <button type="submit" class="btn w-100 fw-bold text-white py-2" style="background-color: #41431B;">Crear Cuenta / Iniciar Sesión</button>
+                </form>
+            </div>
+            
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="container my-5">
+
+
+        <div class="text-center mb-5">
+            <h1 class="fw-bold" style="color: #41431B;">Sobre Nosotros</h1>
+            <p class="text-muted">Tu próximo destino comienza aquí.</p>
+        </div>
+
+        <div class="row g-4 align-items-center mb-5">
+            <div class="col-lg-6">
+                <img src="img/medellin.webp" class="img-fluid rounded-4 shadow w-100" style="height: 380px; object-fit: cover;" alt="Medellín, Colombia">
+            </div>
+            <div class="col-lg-6">
+                <div class="card-style">
+                    <h2 class="fw-bold h3 mb-3" style="color: #41431B;">Quiénes somos</h2>
+                    <p>Somos <strong>Andes Travel</strong>, una agencia de viajes y turismo con sede en Medellín, Colombia. Nos dedicamos a organizar viajes nacionales e internacionales para que cada persona viva su destino sin preocuparse por los detalles.</p>
+                    <p class="mb-0">Desde tiquetes y hoteles hasta traslados, tours y asesoría para visas, te acompañamos antes y durante el viaje para que lo único que tengas que hacer sea disfrutar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 text-center mb-5">
+            
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 shadow-sm h-100 hover-tarjeta" style="background-color: #E3DBBB;">
+                    <div class="display-4 fw-bold" style="color: #41431B; font-size: 2.5rem;">18</div>
+                    <div class="fw-semibold" style="color: #41431B;">destinos disponibles</div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 shadow-sm h-100 hover-tarjeta" style="background-color: #E3DBBB;">
+                    <div class="display-4 fw-bold" style="color: #41431B; font-size: 2.5rem;">8</div>
+                    <div class="fw-semibold" style="color: #41431B;">países</div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 shadow-sm h-100 hover-tarjeta" style="background-color: #E3DBBB;">
+                    <div class="display-4 fw-bold" style="color: #41431B; font-size: 2.5rem;">24</div>
+                    <div class="fw-semibold" style="color: #41431B;">servicios de viaje</div>
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 shadow-sm h-100 hover-tarjeta" style="background-color: #E3DBBB;">
+                    <div class="display-4 fw-bold" style="color: #41431B; font-size: 2.5rem;">4</div>
+                    <div class="fw-semibold" style="color: #41431B;">paquetes turísticos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #41431B;">Lo que nos define</h2>
+            <p class="text-muted">Una agencia cercana, con cobertura desde Colombia hacia el mundo.</p>
+        </div>
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta text-center">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB; font-size: 1.9rem;">🧭</div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Agencia de viajes y turismo</h4>
+                    <p class="text-muted mb-0">Ofrecemos tiquetes, alojamiento, transporte, experiencias y paquetes completos en un solo lugar.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta text-center">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB; font-size: 1.9rem;">📍</div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Desde Medellín</h4>
+                    <p class="text-muted mb-0">Nuestra sede está en Medellín, Antioquia, y desde aquí atendemos a viajeros de todo el país.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta text-center">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB; font-size: 1.9rem;">🌎</div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Nacional e internacional</h4>
+                    <p class="text-muted mb-0">Cubrimos destinos en Colombia y en Estados Unidos, México, España, Francia, Italia, Argentina y Brasil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #41431B;">Viajamos contigo</h2>
+            <p class="text-muted">Cada viajero es distinto, por eso adaptamos el viaje a ti.</p>
+        </div>
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta border-0 h-100" style="border-left: 5px solid #41431B !important;">
+                    <h5 class="fw-bold mb-2" style="color: #41431B;">👨‍👩‍👧 Familias</h5>
+                    <p class="text-muted mb-0">Paquetes y viajes familiares pensados para que grandes y pequeños la pasen bien.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta border-0 h-100" style="border-left: 5px solid #41431B !important;">
+                    <h5 class="fw-bold mb-2" style="color: #41431B;">💑 Parejas</h5>
+                    <p class="text-muted mb-0">Experiencias para parejas y lunas de miel en destinos románticos.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta border-0 h-100" style="border-left: 5px solid #41431B !important;">
+                    <h5 class="fw-bold mb-2" style="color: #41431B;">👫 Grupos de amigos</h5>
+                    <p class="text-muted mb-0">Organizamos viajes grupales, con transporte y actividades para todos.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta border-0 h-100" style="border-left: 5px solid #41431B !important;">
+                    <h5 class="fw-bold mb-2" style="color: #41431B;">🧳 Viajeros individuales</h5>
+                    <p class="text-muted mb-0">Itinerarios personalizados para quienes prefieren explorar a su propio ritmo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="p-5 rounded-4 shadow-sm text-center" style="background-color: #E3DBBB;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3" style="color: #41431B;">¿Listo para tu próximo viaje?</h3>
+                    <p class="text-dark mb-4 opacity-75">Explora nuestros paquetes o cuéntanos qué tienes en mente y armamos tu itinerario.</p>
+                    <a href="paquetes.html" class="btn btn-lg fw-bold text-white me-2 mb-2" style="background-color: #41431B;">Ver Paquetes</a>
+                    <a href="contacto.html" class="btn btn-lg fw-bold mb-2 button-paquetes" style="background-color: #F8F3E1; color: #41431B; border-color: #41431B;">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="text-white pt-5 pb-4" style="background-color: #41431B;">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                
+                
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Andes Travel</h5>
+                    <p class="text-white-50">
+                        Tu agencia de confianza para descubrir los destinos más fascinantes del mundo. Vivamos juntos la magia de viajar con la mejor asesoría y comodidad.
+                    </p>
+                </div>
+
+               
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Explora</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none opacity-75 hover-opacity">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html" class="text-white text-decoration-none opacity-75 hover-opacity">Destinos</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none opacity-75 hover-opacity">Servicios</a></li>
+                        <li class="mb-2"><a href="paquetes.html" class="text-white text-decoration-none opacity-75 hover-opacity">Paquetes</a></li>
+                        <li class="mb-2"><a href="sobre-nosotros.html" class="text-white text-decoration-none opacity-75 hover-opacity">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none opacity-75 hover-opacity">Contactanos</a></li>
+                    </ul>
+                </div>
+
+               
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Contacto</h6>
+                    <p class="text-white-50 mb-2">📍 Medellín, Antioquia, Colombia</p>
+                    <p class="text-white-50 mb-2">📧 contacto@andestravel.com</p>
+                    <p class="text-white-50 mb-2">📞 +57 321 032 3192</p>
+                </div>
+
+            </div>
+
+            
+            <hr class="my-4" style="background-color: #E3DBBB; opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Andes Travel</strong>. Todos los derechos reservados.</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

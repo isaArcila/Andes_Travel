@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Andes Travel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" style="background-color: #E3DBBB !important;">
+    <div class="container-fluid">
+        <!-- Logo de la Marca -->
+        <a class="navbar-brand fw-bold" href="index.html" style="color: #41431B;">ANDES TRAVEL</a>
+        
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Enlaces de Navegación alineados a la izquierda -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold" style="color: #41431B !important;" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="paquetes.html">Paquetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="sobre-nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+
+            <!-- Sección Derecha: Botón de Sesión y Buscador -->
+            <div class="d-flex align-items-center gap-3">
+                
+                <!-- Botón que activa el Modal (Actualizado a Bootstrap 5: data-bs-toggle) -->
+                <button type="button" class="btn btn-sm fw-bold px-3 py-2 text-dark shadow-sm" style="background-color: #AEB784; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Iniciar Sesión
+                </button>
+
+                <!-- Barra de Búsqueda -->
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-sm fw-bold text-white px-3" type="submit" style="background-color: #41431B; border-color: #41431B;">Buscar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- VENTANA MODAL DE INICIAR SESIÓN -->
+<!-- ========================================== -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg border-0 rounded-4" style="background-color: #F9F6EE;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #41431B;">Iniciar Sesión / Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label small fw-bold" style="color: #41431B;">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documento" class="form-label small fw-bold" style="color: #41431B;">Documento de Identificación</label>
+                        <input type="text" class="form-control" id="documento" placeholder="Escribe tu documento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label small fw-bold" style="color: #41431B;">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="Escribe tu correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label small fw-bold" style="color: #41431B;">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Elige un usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label small fw-bold" style="color: #41431B;">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">Nunca compartiremos tu contraseña.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="repassword" class="form-label small fw-bold" style="color: #41431B;">Repite la Contraseña</label>
+                        <input type="password" class="form-control" id="repassword" placeholder="Repite tu contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="sesionCheck">
+                        <label class="form-check-label small text-muted" for="sesionCheck">Mantener sesión iniciada</label>
+                    </div>
+                    <button type="submit" class="btn w-100 fw-bold text-white py-2" style="background-color: #41431B;">Crear Cuenta / Iniciar Sesión</button>
+                </form>
+            </div>
+            
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main>
+        <div class="container my-5">
+            
+            
+            <div class="text-center mb-5">
+                <h1 class="fw-bold" style="color: #41431B;">Nuestros Destinos</h1>
+                <p class="text-muted">Explora los 11 lugares más fascinantes del mundo que tenemos listos para ti.</p>
+            </div>
+
+            <!-- NACIONALES -->
+
+           <div class="mb-5">
+                <div class="border-bottom pb-2 mb-4">
+                    <h2 class="fw-bold h3" style="color: #41431B;">🇨🇴 Destinos Nacionales</h2>
+                    <p class="text-muted small mb-0">Descubre la magia, la biodiversidad y la cultura de nuestra tierra.</p>
+                </div>
+            <div class="row g-4">
+                
+
+                <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/Torre del Reloj en Cartagena de Indias, Colombia.webp" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Cartagena">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Cartagena</h4>
+            <p class="text-muted small">Encanto colonial, murallas históricas y hermosas playas en el caribe colombiano.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalCartagena">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalCartagena" tabindex="-1" aria-labelledby="modalCartagenaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalCartagenaLabel" style="color: #E3DBBB;">Cartagena: Encanto Colonial</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/Torre del Reloj en Cartagena de Indias, Colombia.webp" class="img-fluid rounded-3 shadow-sm w-100" alt="Cartagena Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 4 Días y 3 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$1.450.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+               <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/medellin.webp" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Medellín">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Medellín</h4>
+            <p class="text-muted small">Conocida como la 'Ciudad de la Eterna Primavera', Medellín cautiva con su agradable clima, su vibrante cultura.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalMedellin">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalMedellin" tabindex="-1" aria-labelledby="modalMedellinLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalMedellinLabel" style="color: #E3DBBB;">Medellín: Ciudad de la Eterna Primavera</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/medellin.webp" class="img-fluid rounded-3 shadow-sm w-100" alt="Medellín Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 3 Días y 2 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$950.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/eje_cafetero.avif" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Eje cafetero">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Eje Cafetero</h4>
+            <p class="text-muted small">Un paraíso verde rodeado de imponentes montañas, cafetales tradicionales, pintorescos pueblos de colores y la magia del paisaje cultural cafetero.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalEje">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalEje" tabindex="-1" aria-labelledby="modalEjeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalEjeLabel" style="color: #E3DBBB;">Eje Cafetero: La magia del Café</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/eje_cafetero.avif" class="img-fluid rounded-3 shadow-sm w-100" alt="Eje Cafetero Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 4 Días y 3 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$1.550.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/guajira.jpg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Guajira">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">La Guajira</h4>
+            <p class="text-muted small">Un destino desértico fascinante donde el imponente desierto se encuentra con el mar Caribe, hogar de la rica cultura indígena wayúu y de paisajes naturales inolvidables.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalGuajira">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalGuajira" tabindex="-1" aria-labelledby="modalGuajiraLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalGuajiraLabel" style="color: #E3DBBB;">La Guajira: Hogar de la rica cultura indígena wayúu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/guajira.jpg" class="img-fluid rounded-3 shadow-sm w-100" alt="Guajira Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 4 Días y 3 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$1.750.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/guatape.svg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Guatape">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Guatapé</h4>
+            <p class="text-muted small">Famoso por su imponente y mítica Piedra del Peñol y sus calles coloridas adornadas con zócalos tradicionales que cuentan historias a la orilla de un hermoso embalse.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalGuatape">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalGuatape" tabindex="-1" aria-labelledby="modalGuatapeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalGuatapeLabel" style="color: #E3DBBB;">Guatapé: Historias a la orilla de un hermoso embalse</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/guatape.svg" class="img-fluid rounded-3 shadow-sm w-100" alt="Eje Guatape Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 2 Días y 1 Noche</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$650.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+               
+                <!-- INTERNACIONAL -->
+                <div>
+                <div class="border-bottom pb-2 mb-4">
+                    <h2 class="fw-bold h3" style="color: #41431B; margin-top: 50px;">🌍 Destinos Internacionales</h2>
+                    <p class="text-muted small mb-0">Cruza fronteras y vive experiencias inolvidables alrededor del planeta.</p>
+                </div>
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/paris non ed 4.avif" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Paris">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">París</h4>
+            <p class="text-muted small">La ciudad del amor y la luz, famosa por su arquitectura, su arte y la emblemática Torre Eiffel.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalOrlando">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalOrlando" tabindex="-1" aria-labelledby="modalOrlandoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalParisLabel" style="color: #E3DBBB;">Paris: La ciudad del amor</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/paris non ed 4.avif" class="img-fluid rounded-3 shadow-sm w-100" alt="Paris Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 8 Días y 7 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$10.500.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+       <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/Orlando_skyline-night-view_ss_non-editorial_yoitnj.avif" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Orlando">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Orlando</h4>
+            <p class="text-muted small">La capital mundial de la diversión con parques temáticos increíbles para toda la familia.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalParis">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalParis" tabindex="-1" aria-labelledby="modalOrlandoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalOrlandoLabel" style="color: #E3DBBB;">Orlando: La ciudad de la diversión</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+              <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/Orlando_skyline-night-view_ss_non-editorial_yoitnj.avif" class="img-fluid rounded-3 shadow-sm w-100" alt="Orlando Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 6 Días y 5 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$6.200.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                
+
+                <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/ny.jpg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="NY">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Nueva York</h4>
+            <p class="text-muted small">  La emblemática 'Gran Manzana', una vibrante metrópolis que nunca duerme, famosa por sus imponentes rascacielos, teatros de Broadway, museos de clase mundial y rincones icónicos como Central Park.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalNY">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalNY" tabindex="-1" aria-labelledby="modalNYLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalNYLabel" style="color: #E3DBBB;">Nueva York: La ciudad que nunca duerme</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/ny.jpg" class="img-fluid rounded-3 shadow-sm w-100" alt="NY Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 6 Días y 5 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$7.500.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+                    <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/cancun.jpg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="NY">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Cancún</h4>
+            <p class="text-muted small">Un paraíso de playas de arena blanca y aguas turquesas cristalinas, famoso por su vibrante vida nocturna, su excelente gastronomía y su cercanía a fascinantes ruinas mayas.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalCancun">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalCancun" tabindex="-1" aria-labelledby="modalCancunLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalCancunLabel" style="color: #E3DBBB;">Cancún: Un paraíso de playas</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/cancun.jpg" class="img-fluid rounded-3 shadow-sm w-100" alt="Cancun Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 5 Días y 4 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$5.300.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+                    <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/madrid.jpeg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Madrid">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Madrid</h4>
+            <p class="text-muted small">La vibrante capital española, famosa por su rica historia, su impresionante arquitectura, sus museos de categoría mundial y una animada vida cultural y gastronómica sin igual.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalMadrid">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalMadrid" tabindex="-1" aria-labelledby="modalMadridLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalCancunLabel" style="color: #E3DBBB;">Madrid: La vibrante capital española famosa su impresionante arquitectura</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/madrid.jpeg" class="img-fluid rounded-3 shadow-sm w-100" alt="Cancun Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 8 Días y 7 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$8.900.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                        <div class="col-md-4">
+    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+        <div>
+            <img src="img/Vista_aérea_de_la_Plaza_del_Congreso_10.jpg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="BA">
+            <h4 class="fw-bold mb-2" style="color: #41431B;">Buenos Aires</h4>
+            <p class="text-muted small">Descubre Buenos Aires, una vibrante fusión de elegancia europea y pasión sudamericana, donde el tango, la arquitectura histórica y una oferta gastronómica imperdible te esperan a cada paso.</p>
+        </div>
+        
+        <button type="button" class="btn w-100 mt-auto fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalBA">
+            Más Información
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="modalBA" tabindex="-1" aria-labelledby="modalBALabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+            
+           
+            <div class="modal-header text-white" style="background-color: #41431B;">
+                <h5 class="modal-title fw-bold" id="modalBALabel" style="color: #E3DBBB;">Buenos Aires: Una vibrante fusión de elegancia europea y pasión sudamericana</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/Vista_aérea_de_la_Plaza_del_Congreso_10.jpg" class="img-fluid rounded-3 shadow-sm w-100" alt="BA Detalle">
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-dark mb-2">¿Qué incluye este destino?</h6>
+                        <ul class="list-unstyled text-muted small mb-3">
+                            <li class="mb-2">✅ 6 Días y 5 Noches</li>
+                        </ul>
+                        <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                            <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                            <span class="h4 fw-bold mb-0" style="color: #41431B;">$4.600.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="modal-footer bg-light border-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                <a href="contacto.html" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    </div><!-- row -->
+    </div>
+</main>
+      
+    <footer class="text-white pt-5 pb-4" style="background-color: #41431B;">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                
+                
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Andes Travel</h5>
+                    <p class="text-white-50">
+                        Tu agencia de confianza para descubrir los destinos más fascinantes del mundo. Vivamos juntos la magia de viajar con la mejor asesoría y comodidad.
+                    </p>
+                </div>
+
+               
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Explora</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none opacity-75 hover-opacity">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html" class="text-white text-decoration-none opacity-75 hover-opacity">Destinos</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none opacity-75 hover-opacity">Servicios</a></li>
+                        <li class="mb-2"><a href="paquetes.html" class="text-white text-decoration-none opacity-75 hover-opacity">Paquetes</a></li>
+                        <li class="mb-2"><a href="sobre-nosotros.html" class="text-white text-decoration-none opacity-75 hover-opacity">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none opacity-75 hover-opacity">Contactanos</a></li>
+
+                    </ul>
+                </div>
+
+               
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Contacto</h6>
+                    <p class="text-white-50 mb-2">📍 Medellín, Antioquia, Colombia</p>
+                    <p class="text-white-50 mb-2">📧 contacto@andestravel.com</p>
+                    <p class="text-white-50 mb-2">📞 +57 321 032 3192</p>
+                </div>
+
+            </div>
+
+            
+            <hr class="my-4" style="background-color: #E3DBBB; opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Andes Travel</strong>. Todos los derechos reservados.</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes - Andes Travel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  
+</head>
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" style="background-color: #E3DBBB !important;">
+    <div class="container-fluid">
+        <!-- Logo de la Marca -->
+        <a class="navbar-brand fw-bold" href="index.html" style="color: #41431B;">ANDES TRAVEL</a>
+        
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Enlaces de Navegación alineados a la izquierda -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold" style="color: #41431B !important;" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="paquetes.html">Paquetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="sobre-nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+
+            <!-- Sección Derecha: Botón de Sesión y Buscador -->
+            <div class="d-flex align-items-center gap-3">
+                
+                <!-- Botón que activa el Modal (Actualizado a Bootstrap 5: data-bs-toggle) -->
+                <button type="button" class="btn btn-sm fw-bold px-3 py-2 text-dark shadow-sm" style="background-color: #AEB784; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Iniciar Sesión
+                </button>
+
+                <!-- Barra de Búsqueda -->
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-sm fw-bold text-white px-3" type="submit" style="background-color: #41431B; border-color: #41431B;">Buscar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- VENTANA MODAL DE INICIAR SESIÓN -->
+<!-- ========================================== -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg border-0 rounded-4" style="background-color: #F9F6EE;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #41431B;">Iniciar Sesión / Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label small fw-bold" style="color: #41431B;">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documento" class="form-label small fw-bold" style="color: #41431B;">Documento de Identificación</label>
+                        <input type="text" class="form-control" id="documento" placeholder="Escribe tu documento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label small fw-bold" style="color: #41431B;">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="Escribe tu correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label small fw-bold" style="color: #41431B;">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Elige un usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label small fw-bold" style="color: #41431B;">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">Nunca compartiremos tu contraseña.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="repassword" class="form-label small fw-bold" style="color: #41431B;">Repite la Contraseña</label>
+                        <input type="password" class="form-control" id="repassword" placeholder="Repite tu contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="sesionCheck">
+                        <label class="form-check-label small text-muted" for="sesionCheck">Mantener sesión iniciada</label>
+                    </div>
+                    <button type="submit" class="btn w-100 fw-bold text-white py-2" style="background-color: #41431B;">Crear Cuenta / Iniciar Sesión</button>
+                </form>
+            </div>
+            
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold" style="color: #41431B;">Nuestros Paquetes</h1>
+            <p class="text-muted">Viajes completos, listos para disfrutar. Elige tu paquete y nosotros nos encargamos del resto.</p>
+        </div>
+
+        <div class="mb-5">
+            <div class="border-bottom pb-2 mb-4">
+                <h2 class="fw-bold h3" style="color: #41431B;">🧳 Paquetes Turísticos</h2>
+                <p class="text-muted small mb-0">Alojamiento, traslados y experiencias en un solo precio por persona.</p>
+            </div>
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-xl-3">
+                    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+                        <div>
+                            <img src="img/Torre del Reloj en Cartagena de Indias, Colombia.webp" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Cartagena + Islas del Rosario">
+                            <span class="badge mb-2 text-dark" style="background-color: #E3DBBB;">Nacional</span>
+                            <h4 class="fw-bold mb-1" style="color: #41431B;">Paquete Caribe</h4>
+                            <p class="fw-semibold small mb-2" style="color: #41431B;">📍 Cartagena + Islas del Rosario</p>
+                            <p class="text-muted small">Murallas coloniales, atardeceres en el Caribe y un día de mar cristalino en las Islas del Rosario.</p>
+                        </div>
+                        <div class="pt-3 border-top mt-2">
+                            <p class="text-muted small mb-1">🕒 5 días / 4 noches</p>
+                            <p class="mb-3"><span class="text-muted small">Desde</span> <span class="h5 fw-bold mb-0" style="color: #41431B;">$1.850.000</span> <span class="text-muted small">COP / persona</span></p>
+                            <button type="button" class="btn w-100 fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalCaribe">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+                        <div>
+                            <img src="img/san_andres.jpeg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="San Andrés">
+                            <span class="badge mb-2 text-dark" style="background-color: #E3DBBB;">Nacional</span>
+                            <h4 class="fw-bold mb-1" style="color: #41431B;">Paquete San Andrés</h4>
+                            <p class="fw-semibold small mb-2" style="color: #41431B;">📍 San Andrés</p>
+                            <p class="text-muted small">La isla del mar de siete colores: playas, snorkel y descanso con todo resuelto desde tu llegada.</p>
+                        </div>
+                        <div class="pt-3 border-top mt-2">
+                            <p class="text-muted small mb-1">🕒 5 días / 4 noches</p>
+                            <p class="mb-3"><span class="text-muted small">Desde</span> <span class="h5 fw-bold mb-0" style="color: #41431B;">$2.350.000</span> <span class="text-muted small">COP / persona</span></p>
+                            <button type="button" class="btn w-100 fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalSanAndres">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+                        <div>
+                            <img src="img/ny.jpg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Nueva York">
+                            <span class="badge mb-2 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                            <h4 class="fw-bold mb-1" style="color: #41431B;">Paquete Nueva York</h4>
+                            <p class="fw-semibold small mb-2" style="color: #41431B;">📍 Nueva York</p>
+                            <p class="text-muted small">Times Square, Central Park y los rascacielos más famosos del mundo en una sola escapada.</p>
+                        </div>
+                        <div class="pt-3 border-top mt-2">
+                            <p class="text-muted small mb-1">🕒 6 días / 5 noches</p>
+                            <p class="mb-3"><span class="text-muted small">Desde</span> <span class="h5 fw-bold mb-0" style="color: #41431B;">$7.500.000</span> <span class="text-muted small">COP / persona</span></p>
+                            <button type="button" class="btn w-100 fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalNuevaYork">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="p-4 shadow rounded h-100 d-flex flex-column justify-content-between hover-tarjeta tarjeta-uniforme bg-white">
+                        <div>
+                            <img src="img/madrid.jpeg" class="img-fluid rounded mb-3 tarjeta-destino-img w-100" alt="Madrid + Barcelona">
+                            <span class="badge mb-2 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                            <h4 class="fw-bold mb-1" style="color: #41431B;">Paquete España</h4>
+                            <p class="fw-semibold small mb-2" style="color: #41431B;">📍 Madrid + Barcelona</p>
+                            <p class="text-muted small">Arte, tapas y arquitectura icónica al recorrer dos de las ciudades más vibrantes de España.</p>
+                        </div>
+                        <div class="pt-3 border-top mt-2">
+                            <p class="text-muted small mb-1">🕒 9 días / 8 noches</p>
+                            <p class="mb-3"><span class="text-muted small">Desde</span> <span class="h5 fw-bold mb-0" style="color: #41431B;">$10.800.000</span> <span class="text-muted small">COP / persona</span></p>
+                            <button type="button" class="btn w-100 fw-bold btn-destino" style="background-color: #E3DBBB; color: #41431B; border-color: #41431B;" data-bs-toggle="modal" data-bs-target="#modalEspana">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="modal fade" id="modalCaribe" tabindex="-1" aria-labelledby="modalCaribeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header text-white" style="background-color: #41431B;">
+                    <h5 class="modal-title fw-bold" id="modalCaribeLabel" style="color: #E3DBBB;">Paquete Caribe: Cartagena + Islas del Rosario</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img src="img/Torre del Reloj en Cartagena de Indias, Colombia.webp" class="img-fluid rounded-3 shadow-sm w-100" alt="Cartagena + Islas del Rosario detalle">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-dark mb-2">¿Qué incluye este paquete?</h6>
+                            <ul class="list-unstyled text-muted small mb-3">
+                                <li class="mb-2">✅ 5 días / 4 noches</li>
+                                <li class="mb-2">✅ Alojamiento</li><li class="mb-2">✅ Traslados</li><li class="mb-2">✅ Tours</li>
+                            </ul>
+                            <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                                <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                                <span class="h4 fw-bold mb-0" style="color: #41431B;">$1.850.000 COP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contacto.html?paquete=Paquete%20Caribe" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalSanAndres" tabindex="-1" aria-labelledby="modalSanAndresLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header text-white" style="background-color: #41431B;">
+                    <h5 class="modal-title fw-bold" id="modalSanAndresLabel" style="color: #E3DBBB;">Paquete San Andrés: San Andrés</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img src="img/cancun.jpg" class="img-fluid rounded-3 shadow-sm w-100" alt="San Andrés detalle">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-dark mb-2">¿Qué incluye este paquete?</h6>
+                            <ul class="list-unstyled text-muted small mb-3">
+                                <li class="mb-2">✅ 5 días / 4 noches</li>
+                                <li class="mb-2">✅ Hotel</li><li class="mb-2">✅ Desayuno</li><li class="mb-2">✅ Tours</li><li class="mb-2">✅ Traslados</li>
+                            </ul>
+                            <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                                <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                                <span class="h4 fw-bold mb-0" style="color: #41431B;">$2.350.000 COP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contacto.html?paquete=Paquete%20San%20Andrés" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalNuevaYork" tabindex="-1" aria-labelledby="modalNuevaYorkLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header text-white" style="background-color: #41431B;">
+                    <h5 class="modal-title fw-bold" id="modalNuevaYorkLabel" style="color: #E3DBBB;">Paquete Nueva York: Nueva York</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img src="img/ny.jpg" class="img-fluid rounded-3 shadow-sm w-100" alt="Nueva York detalle">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-dark mb-2">¿Qué incluye este paquete?</h6>
+                            <ul class="list-unstyled text-muted small mb-3">
+                                <li class="mb-2">✅ 6 días / 5 noches</li>
+                                <li class="mb-2">✅ Hotel</li><li class="mb-2">✅ Traslados</li><li class="mb-2">✅ City tour</li>
+                            </ul>
+                            <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                                <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                                <span class="h4 fw-bold mb-0" style="color: #41431B;">$7.500.000 COP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contacto.html?paquete=Paquete%20Nueva%20York" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalEspana" tabindex="-1" aria-labelledby="modalEspanaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header text-white" style="background-color: #41431B;">
+                    <h5 class="modal-title fw-bold" id="modalEspanaLabel" style="color: #E3DBBB;">Paquete España: Madrid + Barcelona</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <img src="img/madrid.jpeg" class="img-fluid rounded-3 shadow-sm w-100" alt="Madrid + Barcelona detalle">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-dark mb-2">¿Qué incluye este paquete?</h6>
+                            <ul class="list-unstyled text-muted small mb-3">
+                                <li class="mb-2">✅ 9 días / 8 noches</li>
+                                <li class="mb-2">✅ Alojamiento</li><li class="mb-2">✅ Traslados</li><li class="mb-2">✅ Recorridos</li>
+                            </ul>
+                            <div class="p-3 rounded-3" style="background-color: #E3DBBB;">
+                                <span class="d-block fw-bold" style="color: #41431B;">Precio por persona:</span>
+                                <span class="h4 fw-bold mb-0" style="color: #41431B;">$10.800.000 COP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contacto.html?paquete=Paquete%20España" class="btn btn-sm fw-bold px-4 text-white btn-destino" style="background-color: #41431B;">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #41431B;">Todo pensado para ti</h2>
+            <p class="text-muted">Cada paquete combina lo esencial para que solo tengas que disfrutar.</p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB; font-size: 1.9rem;">🏨</div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Alojamiento</h4>
+                    <p class="text-muted mb-0">Hoteles seleccionados en cada destino para que descanses cómodo durante todo el viaje.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB; font-size: 1.9rem;">🚐</div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Traslados</h4>
+                    <p class="text-muted mb-0">Transporte entre el aeropuerto y tu alojamiento, sin preocuparte por moverte en un lugar nuevo.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 border rounded shadow-sm h-100 bg-white hover-tarjeta">
+                    <div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: #E3DBBB; font-size: 1.9rem;">🗺️</div>
+                    <h4 class="fw-bold mb-3" style="color: #41431B; font-size: 1.25rem;">Tours y recorridos</h4>
+                    <p class="text-muted mb-0">Conoce lo mejor de cada ciudad con tours y recorridos guiados incluidos en tu paquete.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 py-4">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold" style="color: #41431B;">Compara nuestros paquetes</h2>
+            <p class="text-muted">Precios por persona en pesos colombianos (COP).</p>
+        </div>
+        <div class="table-responsive shadow-sm rounded-3 bg-white">
+            <table class="table table-hover align-middle mb-0">
+                <thead style="background-color: #E3DBBB;">
+                    <tr style="color: #41431B;">
+                        <th scope="col">Paquete</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">Incluye</th>
+                        <th scope="col">Duración</th>
+                        <th scope="col" class="text-end">Precio (COP)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td class="fw-bold" style="color: #41431B;">Paquete Caribe</td>
+                            <td>Cartagena + Islas del Rosario</td>
+                            <td>Alojamiento, Traslados, Tours</td>
+                            <td>5 días / 4 noches</td>
+                            <td class="fw-bold text-end" style="color: #41431B;">$1.850.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="color: #41431B;">Paquete San Andrés</td>
+                            <td>San Andrés</td>
+                            <td>Hotel, Desayuno, Tours, Traslados</td>
+                            <td>5 días / 4 noches</td>
+                            <td class="fw-bold text-end" style="color: #41431B;">$2.350.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="color: #41431B;">Paquete Nueva York</td>
+                            <td>Nueva York</td>
+                            <td>Hotel, Traslados, City tour</td>
+                            <td>6 días / 5 noches</td>
+                            <td class="fw-bold text-end" style="color: #41431B;">$7.500.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold" style="color: #41431B;">Paquete España</td>
+                            <td>Madrid + Barcelona</td>
+                            <td>Alojamiento, Traslados, Recorridos</td>
+                            <td>9 días / 8 noches</td>
+                            <td class="fw-bold text-end" style="color: #41431B;">$10.800.000</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="p-5 rounded-4 shadow-sm text-center" style="background-color: #E3DBBB;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3" style="color: #41431B;">¿No encuentras el paquete ideal?</h3>
+                    <p class="text-dark mb-4 opacity-75">También diseñamos viajes personalizados, familiares, para parejas y para grupos. Cuéntanos qué tienes en mente y armamos tu itinerario.</p>
+                    <a href="contacto.html" class="btn btn-lg fw-bold text-white" style="background-color: #41431B;">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="text-white pt-5 pb-4" style="background-color: #41431B;">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                
+                
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Andes Travel</h5>
+                    <p class="text-white-50">
+                        Tu agencia de confianza para descubrir los destinos más fascinantes del mundo. Vivamos juntos la magia de viajar con la mejor asesoría y comodidad.
+                    </p>
+                </div>
+
+               
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Explora</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none opacity-75 hover-opacity">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html" class="text-white text-decoration-none opacity-75 hover-opacity">Destinos</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none opacity-75 hover-opacity">Servicios</a></li>
+                        <li class="mb-2"><a href="paquetes.html" class="text-white text-decoration-none opacity-75 hover-opacity">Paquetes</a></li>
+                        <li class="mb-2"><a href="sobre-nosotros.html" class="text-white text-decoration-none opacity-75 hover-opacity">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none opacity-75 hover-opacity">Contactanos</a></li>
+                    </ul>
+                </div>
+
+               
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Contacto</h6>
+                    <p class="text-white-50 mb-2">📍 Medellín, Antioquia, Colombia</p>
+                    <p class="text-white-50 mb-2">📧 contacto@andestravel.com</p>
+                    <p class="text-white-50 mb-2">📞 +57 321 032 3192</p>
+                </div>
+
+            </div>
+
+            
+            <hr class="my-4" style="background-color: #E3DBBB; opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Andes Travel</strong>. Todos los derechos reservados.</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

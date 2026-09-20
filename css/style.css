@@ -1,0 +1,172 @@
+    body{
+            background-color: #e3dbbb42;
+        }
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+        .hover-tarjeta {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    }
+    .button-paquetes{
+        border: none;
+        transition:background .3s ease;
+    }
+    .button-paquetes:hover{
+        background: #F8F3E1 !important;
+    }
+    .card-style{
+        background-color: #e3dbbbd4;
+        border: none;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: justify;
+        color: rgba(73, 73, 73, 0.777);
+    }
+    .img-card{
+        border-radius: 10px;
+    }
+    .tarjeta-destino {
+        min-height: 20px;
+    }
+      .hover-tarjeta {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+        }
+        .tarjeta-destino-img {
+            height: 220px;
+            object-fit: cover;
+        }
+        .tarjeta-uniforme {
+            min-height: 480px;
+        }
+        .modal-btn:focus{
+            box-shadow: 0 0 0 .2rem #41431B;
+        }
+        .modal-btn:hover{
+            box-shadow: 0 0 0 .2rem #41431B;
+        }
+       .form-check-input:checked {
+        background-color: #41431B !important;
+        border-color: #41431B !important;
+    }
+
+
+    .form-check-input:focus {
+        border-color: #41431B !important;
+        box-shadow: 0 0 0 0.25rem rgba(65, 67, 27, 0.25) !important;
+    }
+    .btn-sesion{
+        margin-top: 30px;
+        background-color: #F8F3E1;
+        color: #41431B;
+        border-color: #F8F3E1;
+        transition: box-shadow .3s ease;
+    }
+    .btn-sesion:hover{
+        background-color: #f2ecd3;
+        border-color: #E3DBBB;
+        box-shadow: 0 0 0 .25rem rgba(65, 67, 27, 0.358);
+        color: #41431B;
+    }
+    .btn-destino:active{
+    box-shadow: 0 0 0 .25rem rgba(65, 67, 27, 0.358);
+    }
+    .btn-destino:focus{
+        box-shadow: 0 0 0 .25rem rgba(65, 67, 27, 0.358);
+    }
+    .btn-servicio{
+        transition: .3s ease;
+    }
+    .btn-servicio:hover{
+        background-color: #41431B;
+        color: #E3DBBB !important;
+    }
+    .btn-servicio:active{
+        background-color: #41431B !important;
+    }
+
+    /* ---------- Contacto / Paquetes ---------- */
+    /* Utilidades de Bootstrap 5 replicadas para que la página se vea igual aunque bootstrap.min.css (v4) local pise al CDN */
+    .fw-bold { font-weight: 700 !important; }
+    .fw-semibold { font-weight: 600 !important; }
+    .rounded-4 { border-radius: 1rem !important; }
+
+    .info-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .form-contacto > [class*="col-"] {
+        margin-bottom: 1rem;
+    }
+    .form-contacto .form-label {
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+    .form-contacto .form-select {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        color: #495057;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: .375rem;
+    }
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #41431B;
+        box-shadow: 0 0 0 .25rem rgba(65, 67, 27, 0.25);
+        outline: 0;
+    }
+
+    /* Preguntas frecuentes (acordeón) */
+    .accordion { border-radius: .5rem; overflow: hidden; }
+    .accordion-item { background-color: #fff; }
+    .accordion-header { margin: 0; font-size: 1rem; }
+    .accordion-button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1.05rem;
+        text-align: left;
+        color: #41431B;
+        background-color: #fff;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    .accordion-button::after {
+        content: "\25BE";
+        flex-shrink: 0;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        background-image: none;
+        transition: transform .2s ease;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: #E3DBBB;
+        color: #41431B;
+        box-shadow: none;
+    }
+    .accordion-button:not(.collapsed)::after { transform: rotate(180deg); }
+    .accordion-button:focus {
+        outline: 0;
+        box-shadow: 0 0 0 .25rem rgba(65, 67, 27, 0.25);
+    }
+    .accordion-body { padding: 1rem 1.25rem; }
+
+    .table > tbody > tr:hover > * {
+        background-color: #F8F3E1;
+    }

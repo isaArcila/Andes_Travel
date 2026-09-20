@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Andes Travel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  
+</head>
+<body>
+
+   
+   <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" style="background-color: #E3DBBB !important;">
+    <div class="container-fluid">
+        <!-- Logo de la Marca -->
+        <a class="navbar-brand fw-bold" href="index.html" style="color: #41431B;">ANDES TRAVEL</a>
+        
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Enlaces de Navegación alineados a la izquierda -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold" style="color: #41431B !important;" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="paquetes.html">Paquetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="sobre-nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" style="color: #41431B !important;" href="contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+
+            <!-- Sección Derecha: Botón de Sesión y Buscador -->
+            <div class="d-flex align-items-center gap-3">
+                
+                <!-- Botón que activa el Modal (Actualizado a Bootstrap 5: data-bs-toggle) -->
+                <button type="button" class="btn btn-sm fw-bold px-3 py-2 text-dark shadow-sm" style="background-color: #AEB784; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Iniciar Sesión
+                </button>
+
+                <!-- Barra de Búsqueda -->
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-sm fw-bold text-white px-3" type="submit" style="background-color: #41431B; border-color: #41431B;">Buscar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- VENTANA MODAL DE INICIAR SESIÓN -->
+<!-- ========================================== -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg border-0 rounded-4" style="background-color: #F9F6EE;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #41431B;">Iniciar Sesión / Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label small fw-bold" style="color: #41431B;">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documento" class="form-label small fw-bold" style="color: #41431B;">Documento de Identificación</label>
+                        <input type="text" class="form-control" id="documento" placeholder="Escribe tu documento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label small fw-bold" style="color: #41431B;">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="Escribe tu correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label small fw-bold" style="color: #41431B;">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="Elige un usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label small fw-bold" style="color: #41431B;">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">Nunca compartiremos tu contraseña.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="repassword" class="form-label small fw-bold" style="color: #41431B;">Repite la Contraseña</label>
+                        <input type="password" class="form-control" id="repassword" placeholder="Repite tu contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="sesionCheck">
+                        <label class="form-check-label small text-muted" for="sesionCheck">Mantener sesión iniciada</label>
+                    </div>
+                    <button type="submit" class="btn w-100 fw-bold text-white py-2" style="background-color: #41431B;">Crear Cuenta / Iniciar Sesión</button>
+                </form>
+            </div>
+            
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="container my-5">
+        
+        <!-- Título de la Sección -->
+        <div class="text-center mb-5">
+            <h1 class="fw-bold" style="color: #41431B;">Nuestros Servicios</h1>
+            <p class="text-muted">Explora nuestras categorías y encuentra todo lo que necesitas para tu próxima aventura.</p>
+        </div>
+
+        <!-- PESTAÑAS (TABS) PARA LAS 5 CATEGORÍAS -->
+        <ul class="nav nav-pills justify-content-center mb-5 gap-2 flex-wrap" id="serviciosTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 btn-servicio" id="transporte-tab" data-bs-toggle="pill" data-bs-target="#transporte" type="button" role="tab" style="color: #41431B; border: 1px solid #41431B;">🚗 Transporte</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 btn-servicio" id="experiencia-tab" data-bs-toggle="pill" data-bs-target="#experiencia" type="button" role="tab" style="color: #41431B; border: 1px solid #41431B;">🗺️ Experiencia</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 btn-servicio" id="internacional-tab" data-bs-toggle="pill" data-bs-target="#internacional" type="button" role="tab" style="color: #41431B; border: 1px solid #41431B;">✈️ Internacional</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 btn-servicio" id="alojamiento-tab" data-bs-toggle="pill" data-bs-target="#alojamiento" type="button" role="tab" style="color: #41431B; border: 1px solid #41431B;">🏨 Alojamiento</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 btn-servicio" id="viajes-tab" data-bs-toggle="pill" data-bs-target="#viajes" type="button" role="tab" style="color: #41431B; border: 1px solid #41431B;">🌴 Viajes</button>
+            </li>
+        </ul>
+
+        <!-- CONTENIDO DE LAS PESTAÑAS -->
+        <div class="tab-content" id="serviciosTabsContent">
+            
+            <!-- 1. TRANSPORTE -->
+            <div class="tab-pane fade show active" id="transporte" role="tabpanel">
+                <div class="row g-4">
+                    
+                    
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Transporte</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Traslados Aeropuerto-Hotel</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Transporte entre aeropuerto y alojamiento.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Transporte</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Transporte privado</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Vehículos privados para los viajeros.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Transporte</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Transporte para Grupos</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Servicio de transporte para grupos.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                       <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Transporte</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Alquiler de vehículos</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Alquiler de carros durante el viaje.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 2. EXPERIENCIA -->
+            <div class="tab-pane fade" id="experiencia" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Experiencia</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Tours por ciudades</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Recorridos turísticos guiados.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Experiencia</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Excursiones</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Actividades y recorridos en los destinos.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Experiencia</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Entradas a parques</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Gestión de entradas a parques y atracciones.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Experiencia</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Actividades acuáticas</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Experiencias como snorkel y actividades de playa.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Experiencia</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Experiencias gastronómicas</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Actividades relacionadas con gastronomía local.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Experiencia</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Visitas culturales</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Visitas a lugares históricos y culturales.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. INTERNACIONAL -->
+            <div class="tab-pane fade" id="internacional" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Asesoría para visas</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Orientación sobre procesos y requisitos de visa.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Seguro de viaje</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Gestión de seguros para viajeros.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                       <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Requisitos de entrada</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Orientación sobre requisitos de ingreso a países.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                       <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Organización de itinerarios</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Planificación de rutas y actividades.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Internacional</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Asistencia durante el viaje</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Soporte al cliente durante su viaje.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. ALOJAMIENTO -->
+            <div class="tab-pane fade" id="alojamiento" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Alojamiento</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Hoteles</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Reservas de hoteles de diferentes categorías.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Alojamiento</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Resorts</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Opciones de alojamiento todo incluido.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. VIAJES -->
+            <div class="tab-pane fade" id="viajes" role="tabpanel">
+                <div class="row g-4">
+                     <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Viajes</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Tiquetes aéreos</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Reservas de vuelos nacionales e internacionales.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                          <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Viajes</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Reservas de hoteles</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Alojamiento en hoteles, resorts y apartamentos turísticos.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Viajes</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Viajes personalizados</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Itinerarios adaptados a las preferencias del cliente.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                       <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Viajes</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Viajes familiares</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Paquetes diseñados para familias.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Viajes</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Viajes para parejas</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Experiencias para parejas y lunas de miel.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="col-md-6">
+                        <div class="p-4 shadow-sm rounded-3 bg-white hover-tarjeta position-relative border-0 h-100 d-flex flex-column justify-content-between" style="border-left: 5px solid #41431B !important;">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="badge mb-1 text-dark" style="background-color: #E3DBBB;">Viajes</span>
+                                        <h4 class="fw-bold mb-1" style="color: #41431B;">Viajes grupales</h4>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Organización de viajes para grupos.</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <a href="contacto.html" class="btn btn-sm fw-bold px-3 text-white" style="background-color: #AEB784;">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+ <footer class="text-white pt-5 pb-4" style="background-color: #41431B;">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                
+                
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Andes Travel</h5>
+                    <p class="text-white-50">
+                        Tu agencia de confianza para descubrir los destinos más fascinantes del mundo. Vivamos juntos la magia de viajar con la mejor asesoría y comodidad.
+                    </p>
+                </div>
+
+               
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Explora</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none opacity-75 hover-opacity">Inicio</a></li>
+                        <li class="mb-2"><a href="destinos.html" class="text-white text-decoration-none opacity-75 hover-opacity">Destinos</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none opacity-75 hover-opacity">Servicios</a></li>
+                        <li class="mb-2"><a href="paquetes.html" class="text-white text-decoration-none opacity-75 hover-opacity">Paquetes</a></li>
+                        <li class="mb-2"><a href="sobre-nosotros.html" class="text-white text-decoration-none opacity-75 hover-opacity">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white text-decoration-none opacity-75 hover-opacity">Contactanos</a></li>
+                    </ul>
+                </div>
+
+               
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" style="color: #E3DBBB;">Contacto</h6>
+                    <p class="text-white-50 mb-2">📍 Medellín, Antioquia, Colombia</p>
+                    <p class="text-white-50 mb-2">📧 contacto@andestravel.com</p>
+                    <p class="text-white-50 mb-2">📞 +57 321 032 3192</p>
+                </div>
+
+            </div>
+
+            
+            <hr class="my-4" style="background-color: #E3DBBB; opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">&copy; 2026 <strong>Andes Travel</strong>. Todos los derechos reservados.</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
